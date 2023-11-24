@@ -103,4 +103,7 @@ export default Component.extend({
   isNthTopicListItem(n) {
     return isNthTopicListItem(n, this.get("indexNumber"));
   },
+
+  let myVariable = "Hello, world!";
+console.log(myVariable);
 });
