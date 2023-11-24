@@ -1,0 +1,48 @@
+<DSection @class="edit-house-ad content-body">
+  <h1><TextField @class="house-ad-name" @value={{buffered.name}} /></h1>
+  <div class="controls">
+    <AceEditor @content={{buffered.html}} @mode="html" />
+  </div>
+  <div class="controls">
+    <div class="visibility-settings">
+      <div>
+        <Input
+          class="visible-to-logged-in-checkbox"
+          @type="checkbox"
+          @checked={{this.buffered.visible_to_logged_in_users}}
+        />
+        <span>{{i18n "admin.adplugin.house_ads.show_to_logged_in_users"}}</span>
+      </div>
+
+      <div>
+        <Input
+          class="visible-to-anonymous-checkbox"
+          @type="checkbox"
+          @checked={{this.buffered.visible_to_anons}}
+        />
+        <span>{{i18n "admin.adplugin.house_ads.show_to_anons"}}</span>
+      </div>
+    </div>
+
+    <DButton
+      @action={{action "save"}}
+      @disabled={{disableSave}}
+      class="btn-primary save-button"
+      @label="admin.adplugin.house_ads.save"
+    />
+
+    {{#if saving}}
+      {{savingStatus}}
+    {{else}}
+      {{#if dirty}}
+        <a href {{action "cancel"}}>{{i18n "cancel"}}</a>
+      {{/if}}
+    {{/if}}
+
+    <DButton
+      @action={{action "destroy"}}
+      class="btn-danger delete-button"
+      @label="admin.adplugin.house_ads.delete"
+    />
+  </div>
+</DSection>
