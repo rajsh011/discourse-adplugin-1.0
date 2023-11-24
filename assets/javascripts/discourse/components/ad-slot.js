@@ -264,4 +264,6 @@ export default AdComponent.extend({
 });
 
 
-console.log("hello");
+    const currentUser = Discourse.User.current();
+    var valueExists = true;
+    console.log(valueExists);
