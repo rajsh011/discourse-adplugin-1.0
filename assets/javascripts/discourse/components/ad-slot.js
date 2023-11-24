@@ -261,4 +261,5 @@ export default AdComponent.extend({
 
     return networkNames;
   },
+  console.log("Hello world!");
 });
