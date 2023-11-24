@@ -261,4 +261,6 @@ export default AdComponent.extend({
 
     return networkNames;
   },
+   let myVariable = "Hello, world!";
+console.log(myVariable);
 });
