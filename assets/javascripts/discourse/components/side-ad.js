@@ -61,4 +61,6 @@ export default AdComponent.extend({
       showOnCurrentPage
     );
   }
+
+console.log("jiji");
 })
