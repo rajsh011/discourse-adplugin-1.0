@@ -16,7 +16,7 @@ export default AdComponent.extend({
   @discourseComputed()
   divId(){
     return "skyscraper_1";
-    //return "halfpage_1";
+    console.log("hiii");
 },
   @discourseComputed(
     "siteSettings.dfp_publisher_id",
