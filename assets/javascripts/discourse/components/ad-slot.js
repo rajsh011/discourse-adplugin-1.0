@@ -263,6 +263,5 @@ export default AdComponent.extend({
   },
 });
 
-<script>
+
 console.log("hello");
-</script>
