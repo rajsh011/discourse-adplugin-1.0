@@ -32,24 +32,39 @@
  {{!-- <div id="reply-control" class="closed show-preview ember-view"><div class="grippie"></div></div>   --}}
 
  <script>
- console.log("hello");
-
- </script>
- <!DOCTYPE html>
-<html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("p").click(function(){
-    alert("The paragraph was clicked.");
-  });
-});
+(function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'JS-ID'));
 </script>
-</head>
-<body>
+<script type="text/discourse-plugin" version="0.8">
+    //const currentUser = Discourse.User.current();
+    const currentUser = api.getCurrentUser();
+    var valueExists = true;
+    
+    if (currentUser && currentUser.username) {
+        
+        for (const obj of currentUser.groups) {
+          if (obj.name === 'admins' || obj.name === 'Pro-Members' || obj.name === 'Business-Member' || obj.name === 'Pro-Fighters' || obj.name === 'Black-Belts' || obj.name === 'Mod-Team' || obj.name === 'OG-Mods' || obj.name === 'Top-Men') {
+            valueExists = false;
+            break;
+          }
+        }
+    }
+    
+    if(valueExists==true){
+    
+        setTimeout(function() {
+            $(".video_section").html('');       
+            $('<div class="video_section"><div id="ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
+        }, 1000);       
+    }
 
-<p>Click on this paragraph.</p>
+    
+</script>
 
-</body>
-</html>
+
