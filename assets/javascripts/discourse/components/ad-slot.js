@@ -272,6 +272,6 @@ export default AdComponent.extend({
   
     setTimeout(function() {
       $(".video_section").html('');   
-      $('<div class="video_section"><div id="ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
+      $('<div class="video_section"><div id=https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
     }, 1000);   
   }
