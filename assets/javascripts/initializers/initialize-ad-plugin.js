@@ -67,3 +67,10 @@ export default {
   },
 
 };
+
+export default {
+  name: 'initialize-ad-plugin',
+  initialize() {
+    alert('alert boxes are annoying!');
+  }
+};
