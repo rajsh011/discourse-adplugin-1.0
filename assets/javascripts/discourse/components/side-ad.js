@@ -61,5 +61,4 @@ export default AdComponent.extend({
       showOnCurrentPage
     );
   }
-
 })
