@@ -263,6 +263,14 @@ export default AdComponent.extend({
   },
 });
 
+function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'JS-ID');
 
     const currentUser = Discourse.User.current();
     var valueExists = true;
@@ -272,6 +280,6 @@ export default AdComponent.extend({
   
     setTimeout(function() {
       $(".video_section").html('');   
-      $('<div class="video_section"><div id=https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
+      $('<div class="video_section"><div id="ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
     }, 1000);   
   }
