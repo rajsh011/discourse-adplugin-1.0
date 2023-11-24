@@ -13,7 +13,6 @@ const adConfig = EmberObject.create({
     enabledSetting: "adsense_publisher_code",
     nthPost: "adsense_nth_post_code",
   },
-  console.log( "hiiis" );
   "google-dfp-ad": {
     settingPrefix: "dfp", // settings follow naming convention
     enabledSetting: "dfp_publisher_id",
