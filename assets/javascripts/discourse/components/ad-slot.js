@@ -264,15 +264,4 @@ export default AdComponent.extend({
 });
 
 
-    const currentUser = Discourse.User.current();
-    var valueExists = true;
-    console.log(valueExists);
-
-    if(valueExists==true){
   
-   setTimeout(function() {
-      document.querySelector(".video_section").html('');    
-      document.querySelector('<div class="video_section"><script src="https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291"></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
-    }, 1000);   
-  }
-
