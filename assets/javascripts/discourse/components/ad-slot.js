@@ -264,35 +264,15 @@ export default AdComponent.extend({
 });
 
 
-    
-function (d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'JS-ID');
-
-    const currentUser = api.getCurrentUser();
+    const currentUser = Discourse.User.current();
     var valueExists = true;
-    
-    if (currentUser && currentUser.username) {
-        
-        for (const obj of currentUser.groups) {
-          if (obj.name === 'admins' || obj.name === 'Pro-Members' || obj.name === 'Business-Member' || obj.name === 'Pro-Fighters' || obj.name === 'Black-Belts' || obj.name === 'Mod-Team' || obj.name === 'OG-Mods' || obj.name === 'Top-Men') {
-            valueExists = false;
-            break;
-          }
-        }
-    }
-    
+    console.log(valueExists);
+
     if(valueExists==true){
   
-    setTimeout(function() {
+   setTimeout(function() {
       document.querySelector(".video_section").html('');    
-      document.querySelector('<div class="video_section"><div id="ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
+      document.querySelector('<div class="video_section"><script src="https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291"></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
     }, 1000);   
   }
 
-    
