@@ -261,10 +261,8 @@ export default AdComponent.extend({
 
     return networkNames;
   },
-});
 
-       
-    $(document).ready(function() {
+   $(document).ready(function() {
       var id = 'JS-ID';
       if ($('#' + id).length) return;
       var js = $('<script>', {
@@ -274,10 +272,14 @@ export default AdComponent.extend({
       $('head').append(js);
     });
   
-    setTimeout(function() {
+   
       $(".video_section").html('');   
       $('<div class="video_section"><div id="ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
-    }, 1000);   
+  
+});
+
+       
+     
     
 
 
