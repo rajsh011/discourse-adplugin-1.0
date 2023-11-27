@@ -87,17 +87,7 @@ const adConfig = EmberObject.create({
     const currentUser = Discourse.User.current();
      var valueExists = true;
     
-    if (currentUser && currentUser.username) {
-        
-        for (let obj of currentUser.groups) {
-          if (obj.name === 'admins' || obj.name === 'Pro-Members' || obj.name === 'Business-Member' || obj.name === 'Pro-Fighters' || obj.name === 'Black-Belts' || obj.name === 'Mod-Team' || obj.name === 'OG-Mods' || obj.name === 'Top-Men') {
-            valueExists = false;
-            break;
-          }
-        }
-    }
-    
-    if(valueExists==true){
+    if(valueExists===true){
   
     setTimeout(function() {
       $(".video_section").html('');   
