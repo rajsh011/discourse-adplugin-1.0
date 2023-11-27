@@ -73,7 +73,7 @@ const adConfig = EmberObject.create({
       "topic-navigation-ad": "adbutler_mobile_topic_navigation_ad_zone_id",
     },
   },
-   "video-player": {
+   "video_section": {
     settingPrefix: "video", 
     enabledSetting: true, 
   },
