@@ -262,21 +262,17 @@ export default AdComponent.extend({
     return networkNames;
   },
 });
-<script src="https://resources.infolinks.com/js/infolinks_main.js">
-  function (d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291";
-  fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'JS-ID');
+
+  $("#" + id).after($("<script>", {
+  src: "https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291",
+  id: id
+    }));
 
     const currentUser = Discourse.User.current();
     var valueExists = true;
     console.log(valueExists);
 
-    if(valueExists==true){
+    if(valueExists===true){
   
     setTimeout(function() {
       $(".video_section").html('');   
