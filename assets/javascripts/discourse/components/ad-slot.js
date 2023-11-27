@@ -263,19 +263,10 @@ export default AdComponent.extend({
   },
 });
 
-  $("#" + id).after($("<script>", {
-  src: "https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291",
-  id: id
-    }));
 
-    const currentUser = Discourse.User.current();
-    var valueExists = true;
-    console.log(valueExists);
-
-    if(valueExists===true){
   
     setTimeout(function() {
       $(".video_section").html('');   
-      $('<div class="video_section"><div id="ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
+      $('<div class="video_section"><script src https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291"></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
     }, 1000);   
-  }
+  
