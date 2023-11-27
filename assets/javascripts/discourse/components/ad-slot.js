@@ -73,6 +73,10 @@ const adConfig = EmberObject.create({
       "topic-navigation-ad": "adbutler_mobile_topic_navigation_ad_zone_id",
     },
   },
+   "video-player": {
+    settingPrefix: "video", 
+    enabledSetting: true, 
+  },
 });
 
 const displayCounts = {
@@ -274,8 +278,8 @@ export default AdComponent.extend({
       $('head').append(js);
     });
 
-    const currentUser = Discourse.User.current();
-     var valueExists = true;
+    // const currentUser = Discourse.User.current();
+    //  var valueExists = true;
     
     // if (currentUser && currentUser.username) {
         
@@ -287,21 +291,13 @@ export default AdComponent.extend({
     //     }
     // }
     
-      showAd: and(
-    "showToTrustLevel",
-    "showToGroups",
-    "showAfterPost",
-    "showOnCurrentPage"
-  )
-    // if(valueExists==true)
-      {
+    // if(valueExists==true){
   
     setTimeout(function() {
       $(".video_section").html('');   
       $('<div class="video_section"><div id="ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
     }, 1000);   
-  }
-
+  
     
 
 
