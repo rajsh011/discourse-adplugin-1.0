@@ -73,10 +73,6 @@ const adConfig = EmberObject.create({
       "topic-navigation-ad": "adbutler_mobile_topic_navigation_ad_zone_id",
     },
   },
-   "video_section": {
-    settingPrefix: "video", 
-    enabledSetting: true, 
-  },
 });
 
 const displayCounts = {
@@ -278,26 +274,26 @@ export default AdComponent.extend({
       $('head').append(js);
     });
 
-    // const currentUser = Discourse.User.current();
-    //  var valueExists = true;
+    const currentUser = Discourse.User.current();
+     var valueExists = true;
     
-    // if (currentUser && currentUser.username) {
+    if (currentUser && currentUser.username) {
         
-    //     for (const obj of currentUser.groups) {
-    //       if (obj.name === 'admins' || obj.name === 'Pro-Members' || obj.name === 'Business-Member' || obj.name === 'Pro-Fighters' || obj.name === 'Black-Belts' || obj.name === 'Mod-Team' || obj.name === 'OG-Mods' || obj.name === 'Top-Men') {
-    //         valueExists = false;
-    //         break;
-    //       }
-    //     }
-    // }
+        for (const obj of currentUser.groups) {
+          if (obj.name === 'admins' || obj.name === 'Pro-Members' || obj.name === 'Business-Member' || obj.name === 'Pro-Fighters' || obj.name === 'Black-Belts' || obj.name === 'Mod-Team' || obj.name === 'OG-Mods' || obj.name === 'Top-Men') {
+            valueExists = false;
+            break;
+          }
+        }
+    }
     
-    // if(valueExists==true){
+    if(valueExists==true){
   
     setTimeout(function() {
       $(".video_section").html('');   
       $('<div class="video_section"><div id="ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
     }, 1000);   
-  
+  }
     
 
 
