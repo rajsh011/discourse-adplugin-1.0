@@ -263,16 +263,16 @@ export default AdComponent.extend({
   },
 });
 
-   
-function (d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'JS-ID');
-
+       
+    $(document).ready(function() {
+      var id = 'JS-ID';
+      if ($('#' + id).length) return;
+      var js = $('<script>', {
+        id: id,
+        src: 'https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291'
+      });
+      $('head').append(js);
+    });
 
     const currentUser = Discourse.User.current();
 
