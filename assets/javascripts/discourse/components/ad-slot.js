@@ -275,8 +275,17 @@ export default AdComponent.extend({
     });
 
     const currentUser = Discourse.User.current();
-
-    var valueExists = true;
+     var valueExists = true;
+    
+    if (currentUser && currentUser.username) {
+        
+        for (const obj of currentUser.groups) {
+          if (obj.name === 'admins' || obj.name === 'Pro-Members' || obj.name === 'Business-Member' || obj.name === 'Pro-Fighters' || obj.name === 'Black-Belts' || obj.name === 'Mod-Team' || obj.name === 'OG-Mods' || obj.name === 'Top-Men') {
+            valueExists = false;
+            break;
+          }
+        }
+    }
     
     if(valueExists==true){
   
@@ -285,7 +294,6 @@ export default AdComponent.extend({
       $('<div class="video_section"><div id="ace0fe48-0bdb-4202-b78c-dafca2c16291"></div></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
     }, 1000);   
   }
-
     
 
 
