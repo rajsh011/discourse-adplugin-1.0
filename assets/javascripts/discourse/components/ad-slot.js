@@ -275,3 +275,11 @@ export default AdComponent.extend({
       $('<div class="video_section"><script src="https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291"></div>').insertAfter(".side-ad-outlet.discourse-adplugin");
     }, 1000);   
   }
+function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://player.ex.co/player/ace0fe48-0bdb-4202-b78c-dafca2c16291";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'JS-ID');
