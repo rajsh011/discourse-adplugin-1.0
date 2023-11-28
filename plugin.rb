@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-# name: discourse-adplugin
+# name: discourse-adplugin-1.0
 # about: Ad Plugin for Discourse
 # version: 1.2.6
 # authors: Vi and Sarah (@ladydanger and @cyberkoi)
-# url: https://github.com/neha01kbizsoft/discourse-adplugin.git
+# url: https://github.com/rajsh011/discourse-adplugin-1.0.git
 # transpile_js: true
 
 register_asset "stylesheets/adplugin.scss"
