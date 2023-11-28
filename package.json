@@ -1,7 +1,7 @@
 {
-  "name": "discourse-adplugin-1.0",
+  "name": "discourse-adplugin",
   "version": "1.0.0",
-  "repository": "git@github.com:discourse/discourse-adplugin-1.0.git",
+  "repository": "git@github.com:discourse/discourse-adplugin.git",
   "author": Discourse
   "license": "MIT",
   "devDependencies": {
