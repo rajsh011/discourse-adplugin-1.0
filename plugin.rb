@@ -4,7 +4,7 @@
 # about: Ad Plugin for Discourse
 # version: 1.2.6
 # authors: Vi and Sarah (@ladydanger and @cyberkoi) 
-# url: https://github.com/rajsh011/discourse-adplugin-1.0.git
+# url: https://github.com/rajsh011/discourse-adplugin.git
 # transpile_js: true
 
 register_asset "stylesheets/adplugin.scss"
